@@ -123,7 +123,7 @@ namespace LINQtoCSV
                     throw new BadStreamException();
                 }
 
-                stream.BaseStream.Seek(0, SeekOrigin.Begin);
+                stream.BaseStream.Seek(fileDescription.TextEncoding.GetPreamble().Length, SeekOrigin.Begin);
             }
 
             // ----------
